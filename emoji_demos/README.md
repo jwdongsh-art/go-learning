@@ -74,18 +74,22 @@ go run emoji_input_guide.go
 
 ## 🚀 快速开始
 
-### 运行所有演示
+### 运行Emoji演示
 ```bash
-# 进入emoji_demos目录
 cd emoji_demos
 
-# 运行各个演示程序
-go run icon_demo.go
-go run unicode_demo.go  
-go run unicode_helper.go
-go run vscode_unicode_demo.go
-go run emoji_input_guide.go
+# 方法1: 使用管理脚本 (推荐)
+./run_demos.sh
+
+# 方法2: 直接运行单个演示
+go run -tags icon_demo icon_demo.go
+go run -tags unicode_demo unicode_demo.go
+go run -tags unicode_helper unicode_helper.go
+go run -tags vscode_unicode_demo vscode_unicode_demo.go
+go run -tags emoji_input_guide emoji_input_guide.go
 ```
+
+**注意**: 由于每个演示文件都有独立的 `main()` 函数，需要使用 build tags 来单独编译运行。
 
 ### VS Code中的使用
 

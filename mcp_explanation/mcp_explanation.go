@@ -9,6 +9,12 @@ import (
 )
 
 func main() {
+	runMCPExplanation()
+}
+
+// If you have a runMCPExplanation function defined elsewhere, keep it.
+// Otherwise, define it here:
+func runMCPExplanation() {
 	fmt.Println("🔗 MCP (Model Context Protocol) 概念说明")
 	fmt.Println(strings.Repeat("=", 50))
 

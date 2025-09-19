@@ -1,3 +1,6 @@
+//go:build icon_demo
+// +build icon_demo
+
 package main
 
 import (
@@ -7,28 +10,28 @@ import (
 
 // ANSI 颜色代码常量
 const (
-	ColorReset  = "\033[0m"    // 重置颜色
-	ColorRed    = "\033[31m"   // 红色
-	ColorGreen  = "\033[32m"   // 绿色
-	ColorYellow = "\033[33m"   // 黄色
-	ColorBlue   = "\033[34m"   // 蓝色
-	ColorPurple = "\033[35m"   // 紫色
-	ColorCyan   = "\033[36m"   // 青色
-	ColorWhite  = "\033[37m"   // 白色
-	ColorBold   = "\033[1m"    // 粗体
+	ColorReset  = "\033[0m"  // 重置颜色
+	ColorRed    = "\033[31m" // 红色
+	ColorGreen  = "\033[32m" // 绿色
+	ColorYellow = "\033[33m" // 黄色
+	ColorBlue   = "\033[34m" // 蓝色
+	ColorPurple = "\033[35m" // 紫色
+	ColorCyan   = "\033[36m" // 青色
+	ColorWhite  = "\033[37m" // 白色
+	ColorBold   = "\033[1m"  // 粗体
 )
 
 func main() {
 	fmt.Println("🎨 图标和颜色演示程序")
 	fmt.Println(strings.Repeat("=", 30))
-	
+
 	// 1. Unicode Emoji 图标演示
 	fmt.Println("\n📱 Unicode Emoji 图标:")
 	fmt.Println("📊 图表  📈 上升  📉 下降")
 	fmt.Println("🛍️ 购物  🗺️ 地图  📅 日历")
 	fmt.Println("🏆 奖杯  ✅ 成功  ❌ 错误  ⚠️ 警告")
 	fmt.Println("🎯 目标  🚀 火箭  💡 灯泡  🔥 火焰")
-	
+
 	// 2. ANSI 颜色代码演示
 	fmt.Println("\n🌈 ANSI 颜色代码演示:")
 	fmt.Printf("%s红色文本%s\n", ColorRed, ColorReset)
@@ -38,19 +41,19 @@ func main() {
 	fmt.Printf("%s紫色文本%s\n", ColorPurple, ColorReset)
 	fmt.Printf("%s青色文本%s\n", ColorCyan, ColorReset)
 	fmt.Printf("%s%s粗体文本%s\n", ColorBold, ColorYellow, ColorReset)
-	
+
 	// 3. 组合使用
 	fmt.Println("\n🎭 组合使用演示:")
 	fmt.Printf("%s%s🎉 彩色图标组合 🎊%s\n", ColorBold, ColorGreen, ColorReset)
 	fmt.Printf("%s⚡ %s高性能%s%s ⚡%s\n", ColorYellow, ColorBold, ColorReset, ColorYellow, ColorReset)
-	
+
 	// 4. 实际应用场景
 	fmt.Println("\n💼 实际应用场景:")
 	printStatus("success", "✅ 数据加载成功")
 	printStatus("error", "❌ 连接失败")
 	printStatus("warning", "⚠️ 内存使用率较高")
 	printStatus("info", "📊 正在分析数据...")
-	
+
 	// 5. 进度条模拟
 	fmt.Println("\n📈 进度条演示:")
 	for i := 0; i <= 100; i += 20 {
@@ -58,7 +61,7 @@ func main() {
 		for j := 0; j < i/5; j++ {
 			fmt.Print("█")
 		}
-		for j := i/5; j < 20; j++ {
+		for j := i / 5; j < 20; j++ {
 			fmt.Print("░")
 		}
 		fmt.Printf(" %d%%%s", i, ColorReset)

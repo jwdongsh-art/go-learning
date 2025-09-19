@@ -1,3 +1,6 @@
+//go:build vscode_unicode_demo
+// +build vscode_unicode_demo
+
 // 📝 VS Code Unicode 显示机制演示
 // 这个文件演示了为什么VS Code可以直接显示emoji和Unicode字符
 

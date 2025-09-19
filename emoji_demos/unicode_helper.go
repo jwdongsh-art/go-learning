@@ -1,3 +1,6 @@
+//go:build unicode_helper
+// +build unicode_helper
+
 package main
 
 import (

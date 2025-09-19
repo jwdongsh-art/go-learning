@@ -1,3 +1,6 @@
+//go:build emoji_input_guide
+// +build emoji_input_guide
+
 // 🔤 程序员快速输入Emoji指南
 // 本文件演示各种在编程时快速输入emoji的方法
 
